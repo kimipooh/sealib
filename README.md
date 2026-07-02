@@ -2,6 +2,12 @@ English | [日本語](README-ja.md)
 
 # Southeast Asian Serials Database (SEALIB)
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![README Japanese](https://img.shields.io/badge/README-%E6%97%A5%E6%9C%AC%E8%AA%9E-green.svg)](README-ja.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21131422.svg)](https://doi.org/10.5281/zenodo.21131422)
+[![GitHub release](https://img.shields.io/github/v/release/kimipooh/sealib)](https://github.com/kimipooh/sealib/releases)
+[![Website](https://img.shields.io/badge/Website-SEALIB-blue.svg)](https://sealib.cseas.kyoto-u.ac.jp/db/)
+
 This repository provides public documentation, release notes, and citation
 information for the Southeast Asian Serials Database (SEALIB).
 

@@ -2,6 +2,12 @@
 
 # 東南アジア逐次刊行物総合目録データベース（SEALIB）
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![README English](https://img.shields.io/badge/README-English-blue.svg)](README.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21131422.svg)](https://doi.org/10.5281/zenodo.21131422)
+[![GitHub release](https://img.shields.io/github/v/release/kimipooh/sealib)](https://github.com/kimipooh/sealib/releases)
+[![Website](https://img.shields.io/badge/Website-SEALIB-blue.svg)](https://sealib.cseas.kyoto-u.ac.jp/db/)
+
 本リポジトリは、東南アジア逐次刊行物総合目録データベース（SEALIB）の概要、
 公開仕様、リリース記録、引用情報を公開するためのものです。
 
