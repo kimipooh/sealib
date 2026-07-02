@@ -1,7 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this database in your research, please cite it as below."
 title: "Southeast Asian Serials Database (SEALIB)"
-type: software
 version: "3.4.0"
 date-released: "2026-07-02"
 authors:
@@ -11,7 +10,8 @@ authors:
 repository-code: "https://github.com/kimipooh/sealib"
 url: "https://sealib.cseas.kyoto-u.ac.jp/db/"
 abstract: >-
-  SEALIB is a unified bibliographic database of periodicals (journals,
-  newspapers, and official gazettes) held by libraries and research
-  institutions in Southeast Asia and Japan, built in collaboration with
-  120 partner institutions.
+  The Southeast Asian Serials Database (SEALIB) is a bibliographic database
+  of periodicals, including journals, newspapers, and official gazettes, held
+  by libraries and research institutions in Southeast Asia and Japan. This
+  public repository provides documentation, release notes, citation information,
+  and public usage information for SEALIB.
