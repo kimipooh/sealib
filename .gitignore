@@ -1,0 +1,35 @@
+# Editor / OS
+.DS_Store
+*~
+*.tmp
+*.log
+__MACOSX/
+__pycache__/
+
+# Claude / Codex local metadata
+.claude/
+.codex/
+
+# Generated archives
+*.tar.gz
+*.zip
+
+# Defense-in-depth: this repository must never contain the private
+# application source, workspace, releases, or internal data. These
+# patterns guard against accidental copy-in; they are not the mechanism
+# that keeps this repo public-safe (nothing matching these should ever
+# be added here in the first place).
+workspace/
+releases/
+dist/
+admin/
+api/
+classes/
+lang/
+import/
+program2/
+config.inc.php
+*.db
+*.sqlite
+*.sqlite3
+*.php
