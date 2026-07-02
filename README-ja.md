@@ -58,6 +58,8 @@ SEALIB が何を提供するかは [docs/ja/overview.md](docs/ja/overview.md)、
 SEALIB を研究等で利用・引用する場合は、[CITATION.cff](CITATION.cff) の
 情報に基づいて引用してください。
 
+DOI: [10.5281/zenodo.21131422](https://doi.org/10.5281/zenodo.21131422)
+
 ---
 
 ## ライセンス

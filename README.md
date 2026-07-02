@@ -62,6 +62,8 @@ See [CHANGELOG.md](CHANGELOG.md) for the full release history.
 If you use SEALIB in your research, please cite it using the information in
 [CITATION.cff](CITATION.cff).
 
+DOI: [10.5281/zenodo.21131422](https://doi.org/10.5281/zenodo.21131422)
+
 ---
 
 ## License

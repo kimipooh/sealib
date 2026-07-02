@@ -3,6 +3,7 @@ message: "If you use this database in your research, please cite it as below."
 title: "Southeast Asian Serials Database (SEALIB)"
 version: "3.4.0"
 date-released: "2026-07-02"
+doi: "10.5281/zenodo.21131422"
 authors:
   - family-names: "Kitani"
     given-names: "Kimiya"
