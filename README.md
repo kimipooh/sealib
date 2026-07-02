@@ -39,10 +39,14 @@ for the API and OAI-PMH specification.
 
 ## What's new in v3.4.0
 
-- Journal Metrics support formalized into a Program2 import pipeline
+v3.4.0 is the first public documentation release of this repository,
+covering REST API v1, OAI-PMH 2.0, Journal Metrics, the API usage
+manual, and user guides in Japanese and English.
+
+- Journal Metrics support formalized into a repeatable import pipeline
   (dry-run / apply)
 - REST API v1 `include=metrics` — bibliographic records can be returned
-  together with linked journal evaluation metrics
+  together with linked external journal evaluation metrics (e.g. SINTA)
 - `metric_source` filtering on the records list endpoint
 - Journal metric display on bibliographic detail pages
 - OAI-PMH 2.0 harvesting behavior unchanged from prior releases
@@ -69,6 +73,9 @@ If you use SEALIB in your research, please cite it using the information in
 [CITATION.cff](CITATION.cff).
 
 DOI: [10.5281/zenodo.21131422](https://doi.org/10.5281/zenodo.21131422)
+
+> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.4.0).
+> https://doi.org/10.5281/zenodo.21131422
 
 ---
 

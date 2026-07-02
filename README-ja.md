@@ -35,8 +35,12 @@ SEALIB が何を提供するかは [docs/ja/overview.md](docs/ja/overview.md)、
 
 ## v3.4.0 の主な変更点
 
-- Journal Metrics のインポート処理を Program2 パイプライン（dry-run /
-  apply）として正式化
+v3.4.0 は本リポジトリ初の公開ドキュメントリリースであり、REST API v1、
+OAI-PMH 2.0、Journal Metrics、API利用マニュアル、日英ユーザーガイドを
+含みます。
+
+- Journal Metrics のインポート処理を再実行可能なインポートパイプライン
+  （dry-run / apply）として正式化
 - REST API v1 の `include=metrics` に対応 — 書誌レコードに紐づく外部評価
   指標を合わせて取得可能
 - 一覧取得エンドポイントでの `metric_source` 絞り込みに対応
@@ -65,6 +69,9 @@ SEALIB を研究等で利用・引用する場合は、[CITATION.cff](CITATION.c
 情報に基づいて引用してください。
 
 DOI: [10.5281/zenodo.21131422](https://doi.org/10.5281/zenodo.21131422)
+
+> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.4.0).
+> https://doi.org/10.5281/zenodo.21131422
 
 ---
 
