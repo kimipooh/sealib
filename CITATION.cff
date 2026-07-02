@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this database in your research, please cite it as below."
 title: "Southeast Asian Serials Database (SEALIB)"
-version: "3.4.0"
+version: "3.4.1"
 date-released: "2026-07-02"
-doi: "10.5281/zenodo.21131422"
+doi: "10.5281/zenodo.21133414"
 license: "CC-BY-4.0"
 keywords:
   - "Southeast Asia"

@@ -4,7 +4,7 @@ English | [日本語](README-ja.md)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![README Japanese](https://img.shields.io/badge/README-%E6%97%A5%E6%9C%AC%E8%AA%9E-green.svg)](README-ja.md)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21131422.svg)](https://doi.org/10.5281/zenodo.21131422)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21133414.svg)](https://doi.org/10.5281/zenodo.21133414)
 [![GitHub release](https://img.shields.io/github/v/release/kimipooh/sealib)](https://github.com/kimipooh/sealib/releases)
 [![Website](https://img.shields.io/badge/Website-SEALIB-blue.svg)](https://sealib.cseas.kyoto-u.ac.jp/db/)
 
@@ -23,7 +23,7 @@ across the region, integrating bibliographic records and holdings
 information for area studies research.
 
 - **Live system**: https://sealib.cseas.kyoto-u.ac.jp/db/
-- **Current release**: v3.4.0 (2026-07-02)
+- **Current release**: v3.4.1 (2026-07-02)
 
 SEALIB can be used in two ways: through its multilingual web interface —
 to search periodicals and view bibliographic, holdings, and Journal
@@ -72,10 +72,10 @@ See [CHANGELOG.md](CHANGELOG.md) for the full release history.
 If you use SEALIB in your research, please cite it using the information in
 [CITATION.cff](CITATION.cff).
 
-DOI: [10.5281/zenodo.21131422](https://doi.org/10.5281/zenodo.21131422)
+DOI: [10.5281/zenodo.21133414](https://doi.org/10.5281/zenodo.21133414)
 
-> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.4.0).
-> https://doi.org/10.5281/zenodo.21131422
+> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.4.1).
+> https://doi.org/10.5281/zenodo.21133414
 
 ---
 
