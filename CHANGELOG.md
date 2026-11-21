@@ -7,7 +7,7 @@ repository structure.
 
 ## v3.5.0
 
-Public database 2026-10-05. Public documentation release date pending.
+Public database 2026-10-05. Public documentation 2026-11-21.
 
 - Bibliographic detail pages show the SINTA evaluation source and link
   to the journal's official profile, where readers can check the latest

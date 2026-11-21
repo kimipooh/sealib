@@ -73,7 +73,11 @@ and does not publish them.
 ## Citation
 
 Citation metadata is available in [CITATION.cff](CITATION.cff).
-The version-specific DOI for v3.5.0 will be added after it is issued.
+
+### Citing this version (v3.5.0)
+
+> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.5.0).
+> https://doi.org/10.5281/zenodo.24418662
 
 ### Citing the previous version (v3.4.1)
 

@@ -18,7 +18,7 @@ SEALIB は2009年のデータ整理開始以来、木谷公哉（京都大学CSE
 | v3.3.1 | 2026年5月 | REST API v1 に Journal Metrics 連携（`include=metrics`、`metric_source` 絞り込み）を追加 |
 | v3.4.0 | 公開 DB 2026-06-18、公開文書 2026-07-02 | Journal Metrics のインポート処理を正式化し、インドネシアの SINTA データを追加。書誌詳細に Grade を表示 |
 | v3.4.1 | 公開文書 2026-07-02 | 公開文書と引用メタデータを更新。v3.4.x の Grade 表示を維持 |
-| **v3.5.0** | **公開 DB 2026-10-05、公開文書の公開日は未確定** | SINTA の評価元と各誌の公式プロフィールへのリンクを提供。SINTA の評価値は公開せず、REST API では `grade`・`fetched_at` は `null` |
+| **v3.5.0** | **公開 DB 2026-10-05、公開文書 2026-11-21** | SINTA の評価元と各誌の公式プロフィールへのリンクを提供。SINTA の評価値は公開せず、REST API では `grade`・`fetched_at` は `null` |
 
 ## データ収録の広がり
 

@@ -67,7 +67,11 @@ SINTA 公式プロフィールへのリンクを提供します。最新の評�
 ## 引用方法
 
 引用メタデータは [CITATION.cff](CITATION.cff) に記載しています。
-v3.5.0 の版別 DOI は発行後に追記します。
+
+### 現行版（v3.5.0）の引用
+
+> Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.5.0).
+> https://doi.org/10.5281/zenodo.24418662
 
 ### 旧版（v3.4.1）の引用
 
