@@ -4,7 +4,6 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![README English](https://img.shields.io/badge/README-English-blue.svg)](README.md)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21133414.svg)](https://doi.org/10.5281/zenodo.21133414)
 [![GitHub release](https://img.shields.io/github/v/release/kimipooh/sealib)](https://github.com/kimipooh/sealib/releases)
 [![Website](https://img.shields.io/badge/Website-SEALIB-blue.svg)](https://sealib.cseas.kyoto-u.ac.jp/db/)
 
@@ -21,33 +20,35 @@ SEALIB は、東南アジア諸国および日本の図書館・研究機関が�
 機関とともに構築してきました。
 
 - **公開URL**: https://sealib.cseas.kyoto-u.ac.jp/db/
-- **現在の公開版**: v3.4.1（2026-07-02）
+- **公開データベース**: SEALIB v3.5.0（2026年10月5日公開）
 
-SEALIB は、多言語対応のWeb画面（逐次刊行物の検索、書誌情報・所蔵情報・
-Journal Metrics の確認）と、REST API v1 / OAI-PMH 2.0（同じ情報を機械的
-に取得し、分析や外部システム連携に利用）の2通りの方法で利用できます。
-SEALIB が何を提供するかは [docs/ja/overview.md](docs/ja/overview.md)、
-画面での検索・閲覧方法は
-[docs/ja/user-guide.md](docs/ja/user-guide.md)、API・OAI-PMH の仕様は
-[docs/ja/api-overview.md](docs/ja/api-overview.md) を参照してください。
+この文書では、SEALIB v3.5.0 の利用方法と変更点を説明します。
+
+多言語対応の Web 画面で逐次刊行物を検索し、書誌・所蔵情報と SINTA への
+リンクを確認できます。
+REST API v1 と OAI-PMH 2.0 は、書誌・所蔵情報の外部取得・再利用を支えます。
+
+- [概要](docs/ja/overview.md)
+- [利用ガイド](docs/ja/user-guide.md)
+- [API 概要](docs/ja/api-overview.md)
 
 ---
 
-## v3.4.0 の主な変更点
+## v3.5.0 の主な変更点
 
-v3.4.0 は本リポジトリ初の公開ドキュメントリリースであり、REST API v1、
-OAI-PMH 2.0、Journal Metrics、API利用マニュアル、日英ユーザーガイドを
-含みます。
+v3.5.0 では、書誌詳細と REST API の Journal Metrics で、評価元と該当誌の
+SINTA 公式プロフィールへのリンクを提供します。最新の評価値は公式プロフィールで
+確認してください。
+現在対応している国別の評価情報源は、インドネシアの学術誌評価制度 SINTA のみです。
+その国の学術誌を検討する際の参考情報として利用できます。
 
-- Journal Metrics のインポート処理を再実行可能なインポートパイプライン
-  （dry-run / apply）として正式化
-- REST API v1 の `include=metrics` に対応 — 書誌レコードに紐づく外部評価
-  指標を合わせて取得可能
-- 一覧取得エンドポイントでの `metric_source` 絞り込みに対応
-- 書誌詳細ページでの評価指標表示に対応
-- OAI-PMH の既存仕様は変更なく維持
+評価値は変動し、継続的な再取得・照合・更新に手間がかかります。SEALIB は SINTA の
+情報を Web から半自動で取得しており、提供元 API によるリアルタイム更新を利用して
+いません。そのため、取得時点の値が提供元の最新情報と食い違う場合があります。
+取得時点の評価値は照合・検討用に運用側で保持し、公開しません。
 
-詳細な変更履歴は [CHANGELOG.md](CHANGELOG.md) を参照してください。
+- [Journal Metrics](docs/ja/journal-metrics.md)
+- [変更履歴](CHANGELOG.md)
 
 ---
 
@@ -58,17 +59,17 @@ OAI-PMH 2.0、Journal Metrics、API利用マニュアル、日英ユーザーガ
 | 概要 | [docs/ja/overview.md](docs/ja/overview.md) | [docs/en/overview.md](docs/en/overview.md) | SEALIB が何を提供し、どう利用できるか |
 | 利用ガイド | [docs/ja/user-guide.md](docs/ja/user-guide.md) | [docs/en/user-guide.md](docs/en/user-guide.md) | Web画面での検索・閲覧方法 |
 | API 概要 | [docs/ja/api-overview.md](docs/ja/api-overview.md) | [docs/en/api-overview.md](docs/en/api-overview.md) | REST API v1 / OAI-PMH 2.0 のエンドポイント・パラメータ・使用例 |
-| Journal Metrics | [docs/ja/journal-metrics.md](docs/ja/journal-metrics.md) | [docs/en/journal-metrics.md](docs/en/journal-metrics.md) | 外部評価指標連携の枠組み |
+| Journal Metrics | [docs/ja/journal-metrics.md](docs/ja/journal-metrics.md) | [docs/en/journal-metrics.md](docs/en/journal-metrics.md) | SINTA 公式プロフィールへのリンクと評価値の取り扱い |
 | バージョン履歴 | [docs/ja/history.md](docs/ja/history.md) | [docs/en/history.md](docs/en/history.md) | 公開可能な範囲でのリリース履歴 |
 
 ---
 
 ## 引用方法
 
-SEALIB を研究等で利用・引用する場合は、[CITATION.cff](CITATION.cff) の
-情報に基づいて引用してください。
+引用メタデータは [CITATION.cff](CITATION.cff) に記載しています。
+v3.5.0 の版別 DOI は発行後に追記します。
 
-DOI: [10.5281/zenodo.21133414](https://doi.org/10.5281/zenodo.21133414)
+### 旧版（v3.4.1）の引用
 
 > Kitani, K. (2026). *Southeast Asian Serials Database (SEALIB)* (v3.4.1).
 > https://doi.org/10.5281/zenodo.21133414

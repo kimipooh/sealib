@@ -2,13 +2,13 @@ English | [日本語](../ja/api-overview.md)
 
 # API Overview (Public Specification)
 
-SEALIB publishes REST API v1 and OAI-PMH 2.0 as machine-readable
-interfaces for retrieving bibliographic information, holdings
-information, and Journal Metrics (external evaluation data). Researchers,
-librarians, and other data users can use them for data analysis or
-integration with external systems. This document is a user-facing
-overview; it does not name implementation files or server-side directory
-structure.
+REST API v1 and OAI-PMH 2.0 support external retrieval and reuse of
+bibliographic and holdings information.
+The REST API provides bibliographic records and holdings. OAI-PMH
+provides bibliographic metadata for harvesting. The REST API v1 examples
+below reflect local verification of v3.5.0. On 2026-11-21, the production
+records list and detail requests returned HTTP 404. Their JSON responses
+remain unverified.
 
 ## Basic specification
 
@@ -46,67 +46,52 @@ The `db` parameter selects which database to query.
 | `media` | Filter by media type |
 | `issn` | Filter by ISSN |
 | `include` | Attach related data (`holdings`, `metrics`) |
-| `metric_source` | Filter by Journal Metrics source |
+| `metric_source` | Filter by Journal Metrics source (records list only) |
 | `page` | Page number to retrieve |
 | `per_page` | Number of results per page |
 
 ### The `include` parameter
 
-- `include=holdings`: attaches holdings information.
-- `include=metrics`: attaches Journal Metrics (external evaluation data).
-  Records without a matching metric are returned without it.
-- `include=holdings,metrics`: a comma-separated list retrieves both
-  holdings and Journal Metrics in the same response.
+- `include=holdings` adds holdings to a single record.
+- `include=metrics` adds a `metrics` array on list and single-record
+  requests. The array is empty when there is no match. Omit the option to
+  omit the `metrics` key.
+- `include=holdings,metrics` retrieves both for a single record.
 
 ### The `metric_source` parameter
 
-Filters results to records with Journal Metrics from a specific source
-(e.g. SINTA). Multiple sources can be specified as a comma-separated
-list. This filter works the same way for both single-record and list
-retrieval.
+`metric_source=SINTA` limits the records list to records linked to SINTA.
+The parameter accepts comma-separated source names and is ignored on
+single-record requests. SINTA is the only source currently supported.
+[Journal Metrics](journal-metrics.md)
 
-See [journal-metrics.md](journal-metrics.md) for background on Journal
-Metrics.
+## REST API request examples
 
-## Usage examples
+These paths are relative to the REST API base path `/api`.
 
-```bash
-curl -H 'User-Agent: example-client' 'https://sealib.cseas.kyoto-u.ac.jp/db/api/v1/records?q=thai&per_page=2'
-
-curl -H 'User-Agent: example-client' 'https://sealib.cseas.kyoto-u.ac.jp/db/api/v1/records?include=metrics&metric_source=SINTA&per_page=2'
-
-curl -H 'User-Agent: example-client' 'https://sealib.cseas.kyoto-u.ac.jp/db/api/v1/records/(01)001TH00001?include=holdings,metrics'
+```text
+GET /v1/records?db=ext&include=metrics&metric_source=SINTA&per_page=2
+GET /v1/records/%2801%29001IO00005?db=ext&include=holdings,metrics
 ```
 
-## Example response
+## Example SINTA response
 
-Listing `records` returns JSON roughly shaped like this (a simplified
-example with a reduced set of fields):
+This excerpt shows selected fields of a SINTA entry in the `metrics`
+array on list and single-record responses. Both `grade` and `fetched_at`
+are `null`. For the latest rating, follow `url` to the official profile.
 
 ```json
 {
-  "records": [
+  "metrics": [
     {
-      "id": "(01)001TH00001",
-      "title": "Example Journal Title",
-      "holdings": [
-        { "abbr_id": "TH001", "volumes": "v.1-v.10" }
-      ],
-      "metrics": [
-        { "source": "SINTA", "grade": "S2", "url": "https://example.org/" }
-      ]
+      "source": "SINTA",
+      "grade": null,
+      "fetched_at": null,
+      "url": "https://sinta.kemdiktisaintek.go.id/journals/profile/59"
     }
-  ],
-  "pagination": {
-    "page": 1,
-    "per_page": 2,
-    "total": 42
-  }
+  ]
 }
 ```
-
-`holdings` is included only when `include=holdings` is specified, and
-`metrics` only when `include=metrics` is specified.
 
 ## HTTP status codes
 
@@ -138,14 +123,13 @@ https://sealib.cseas.kyoto-u.ac.jp/db/api/oai?verb=ListRecords&metadataPrefix=oa
 
 For harvesting large numbers of records, use `resumptionToken` for
 incremental retrieval. Like the REST API, OAI-PMH requires a `User-Agent`
-header and is subject to rate limiting. Journal Metrics support is an
-extension of REST API v1 only; the existing OAI-PMH specification is
-unchanged as of v3.4.0.
+header and is subject to rate limiting. OAI-PMH responses do not include
+Journal Metrics.
 
 ## Typical use cases
 
-- Researchers analyzing bibliographic, holdings, and evaluation data
-  together
+- Researchers analyzing bibliographic and holdings data and following
+  links to official SINTA profiles as needed
 - Librarians checking holdings or integrating data with their own
   library systems
 - Data users importing SEALIB data into external tools or dashboards

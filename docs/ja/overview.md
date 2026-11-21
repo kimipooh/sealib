@@ -27,9 +27,9 @@ SEALIB は、以下の情報を横断的に参照できる情報基盤です。
 
 - **書誌情報**: タイトル、責任表示、刊行頻度、出版国・言語など
 - **所蔵情報**: どの機関がどの巻号を所蔵しているか
-- **外部評価指標（Journal Metrics）**: SINTA など外部の学術誌評価情報を
-  書誌情報に紐づけて参照可能（詳細は
-  [journal-metrics.md](journal-metrics.md) を参照）
+- **Journal Metrics** は、対応する書誌に評価元と該当誌の SINTA 公式プロフィール
+  へのリンクを掲載します。最新の評価値はリンク先で確認できます。
+  [Journal Metrics](journal-metrics.md)
 
 ## 提供形態
 
@@ -47,7 +47,7 @@ SEALIB は、Web画面での利用と、API による機械的な利用の両方
   も、音標を外した綴りでも同じレコードを検索できます）
 - 書誌情報を確認する
 - 所蔵情報（どの機関がどの巻号を所蔵しているか）を確認する
-- 詳細ページで Journal Metrics（外部評価指標）を確認する
+- 詳細ページの Journal Metrics から SINTA 公式プロフィールを開く
 - 詳細ページから CiNii Books・国立国会図書館サーチ・Library of Congress
   など外部サービスへ移動する
 
@@ -56,15 +56,11 @@ SEALIB は、Web画面での利用と、API による機械的な利用の両方
 
 ### API・データ連携としての利用
 
-REST API v1（読み取り専用、JSON）と OAI-PMH 2.0（メタデータハーベス
-ティング）を通じて、次のことができます。
-
-- 書誌情報・所蔵情報を機械的に取得する
-- `include=metrics` を指定して Journal Metrics を付与した形で取得する
-- `metric_source` を指定して特定の評価情報源に絞り込む
-- 取得したデータを分析や外部システムとの連携に利用する
-
-API の詳細は [api-overview.md](api-overview.md) を参照してください。
+REST API v1 と OAI-PMH 2.0 は、書誌・所蔵情報の外部取得・再利用を支えます。
+REST API では、個別書誌で `include=holdings` を指定すると所蔵情報を取得できます。
+書誌一覧・個別取得で `include=metrics` を指定すると、評価元と SINTA 公式
+プロフィール URL を取得できます。一覧は `metric_source` で情報源を絞り込めます。
+[API 概要](api-overview.md)
 
 ---
 

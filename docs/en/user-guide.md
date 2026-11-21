@@ -56,9 +56,10 @@ Selecting a record from the results opens a detail page showing:
   volumes/issues
 - **Links to external services** — related identifiers and links such as
   NCID, ISSN, LCCN, and NDL
-- **Journal Metrics** — when a linked external evaluation metric exists,
-  its source, grade, and related fields are also shown (see
-  [journal-metrics.md](journal-metrics.md))
+- **Journal Metrics** shows the evaluation source and links to the
+  journal's official SINTA profile on linked records. In v3.5.0,
+  SINTA ratings are unpublished. Check the linked profile for the latest
+  rating. [Journal Metrics](journal-metrics.md)
 
 ## Data coverage
 
@@ -92,11 +93,12 @@ Detail pages let you navigate to external services such as:
 
 ## Using the API and OAI-PMH
 
-In addition to the web interface, SEALIB supports programmatic data
-retrieval through REST API v1 and OAI-PMH 2.0. Bibliographic and
-holdings information can be retrieved, and adding `include=metrics`
-returns linked Journal Metrics as well. See
-[api-overview.md](api-overview.md) for details.
+REST API v1 and OAI-PMH 2.0 support external retrieval and reuse of
+bibliographic and holdings information.
+Use `include=holdings` on a single-record REST API request to retrieve
+holdings. Use `include=metrics` on list and single-record requests to
+retrieve the SINTA source and profile URL. Filter the records list by
+source with `metric_source`. [API overview](api-overview.md)
 
 ---
 

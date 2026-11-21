@@ -32,9 +32,9 @@ SEALIB is an information infrastructure that lets users cross-reference:
 - **Bibliographic information**: title, statement of responsibility,
   publication frequency, country/language of publication, and more
 - **Holdings information**: which institutions hold which volumes/issues
-- **External evaluation metrics (Journal Metrics)**: external journal
-  evaluation data such as SINTA, linked to bibliographic records (see
-  [journal-metrics.md](journal-metrics.md))
+- **Journal Metrics** provides the evaluation source and a link to the
+  journal's official SINTA profile on linked records. Check the profile
+  for the latest rating. [Journal Metrics](journal-metrics.md)
 
 ## Access methods
 
@@ -54,7 +54,7 @@ The multilingual web search interface lets you:
 - View bibliographic information
 - View holdings information (which institutions hold which
   volumes/issues)
-- View Journal Metrics (external evaluation indices) on detail pages
+- Open the official SINTA profile from Journal Metrics on detail pages
 - Follow links from detail pages to external services such as CiNii
   Books, NDL Search, and the Library of Congress
 
@@ -63,17 +63,12 @@ detail pages.
 
 ### Using the API for data access
 
-REST API v1 (read-only, JSON) and OAI-PMH 2.0 (metadata harvesting) let
-you:
-
-- Retrieve bibliographic and holdings information programmatically
-- Retrieve records with Journal Metrics attached by specifying
-  `include=metrics`
-- Filter by a specific evaluation source using `metric_source`
-- Use the retrieved data for analysis or integration with external
-  systems
-
-See [api-overview.md](api-overview.md) for API details.
+REST API v1 and OAI-PMH 2.0 support external retrieval and reuse of
+bibliographic and holdings information.
+Use `include=holdings` on a single-record REST API request to retrieve
+holdings. Use `include=metrics` on list and single-record requests to
+retrieve the SINTA source and profile URL. Filter the records list by
+source with `metric_source`. [API overview](api-overview.md)
 
 ---
 

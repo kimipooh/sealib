@@ -17,7 +17,9 @@ implementation details or internal maintenance procedures.
 | v3.2.x | April 2026 | Added Journal Metrics: external evaluation indices (e.g. SINTA) linked to bibliographic records, with search and detail-page support |
 | v3.3.0 | April 2026 | Released REST API v1 and OAI-PMH 2.0; published bilingual usage documentation |
 | v3.3.1 | May 2026 | Added Journal Metrics support to REST API v1 (`include=metrics`, `metric_source` filtering) |
-| **v3.4.0** | **July 2026** | Formalized the Journal Metrics import process as a repeatable pipeline; added further SINTA (Indonesia) data |
+| v3.4.0 | Public database 2026-06-18, documentation 2026-07-02 | Established the Journal Metrics import process and added SINTA (Indonesia) data. Record details displayed Grade |
+| v3.4.1 | Documentation 2026-07-02 | Updated public documentation and citation metadata. The v3.4.x Grade display still applied |
+| **v3.5.0** | **Public database 2026-10-05, documentation release date pending** | Provides the SINTA source and each journal's official profile link. SINTA ratings are unpublished. The REST API returns `null` for `grade` and `fetched_at` |
 
 ## Growth of coverage
 

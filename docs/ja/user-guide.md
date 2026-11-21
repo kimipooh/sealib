@@ -52,9 +52,9 @@
 - **所蔵館情報**: どの機関がどの巻号を所蔵しているか
 - **外部サービスへのリンク**: NCID、ISSN、LCCN、NDL など、関連する識別子
   ・外部サービスへのリンク
-- **Journal Metrics**: 対応する外部評価指標がある場合は、評価元・
-  グレードなどの情報もあわせて表示されます（詳細は
-  [journal-metrics.md](journal-metrics.md) を参照）
+- **Journal Metrics** では、対応する書誌に評価元と該当誌の SINTA 公式プロフィール
+  へのリンクを表示します。v3.5.0 では SINTA の評価値を掲載しません。
+  最新の評価値はリンク先で確認してください。[Journal Metrics](journal-metrics.md)
 
 ## 収録データ
 
@@ -86,10 +86,11 @@ Web画面上で公開しています。内部でどのように処理してい�
 
 ## API・OAI-PMH での利用
 
-画面での検索・閲覧に加えて、SEALIB は REST API v1 と OAI-PMH 2.0 による
-機械的なデータ取得にも対応しています。書誌情報・所蔵情報に加え、
-`include=metrics` の指定により Journal Metrics も取得できます。詳細は
-[api-overview.md](api-overview.md) を参照してください。
+REST API v1 と OAI-PMH 2.0 は、書誌・所蔵情報の外部取得・再利用を支えます。
+REST API では、個別書誌で `include=holdings` を指定すると所蔵情報を取得できます。
+書誌一覧・個別取得で `include=metrics` を指定すると、評価元と SINTA 公式
+プロフィール URL を取得できます。一覧は `metric_source` で情報源を絞り込めます。
+[API 概要](api-overview.md)
 
 ---
 

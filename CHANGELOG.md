@@ -5,7 +5,28 @@ All notable public-facing changes to the Southeast Asian Serials Database
 notes only; it does not describe internal implementation details or
 repository structure.
 
+## v3.5.0
+
+Public database 2026-10-05. Public documentation release date pending.
+
+- Bibliographic detail pages show the SINTA evaluation source and link
+  to the journal's official profile, where readers can check the latest
+  rating. v3.5.0 leaves SINTA ratings unpublished. v3.4.x displayed Grade.
+- REST API v1 returns the SINTA profile URL and `null` for `grade` and
+  `fetched_at` on list and single-record requests with `include=metrics`.
+  `metric_source` filters the records list.
+- SINTA remains the only supported national evaluation source. SEALIB
+  retains retrieved ratings internally for verification and review.
+  [Journal Metrics](docs/en/journal-metrics.md) · [日本語](docs/ja/journal-metrics.md)
+
+## v3.4.1 — 2026-07-02
+
+- Updated the public documentation and citation metadata. The
+  version-specific DOI is [10.5281/zenodo.21133414](https://doi.org/10.5281/zenodo.21133414).
+
 ## v3.4.0 — 2026-07-02
+
+Public database 2026-06-18. Public documentation 2026-07-02.
 
 - Journal Metrics support formalized as a repeatable import pipeline
   (dry-run / apply), including SINTA (Indonesia) journal evaluation data.
@@ -13,7 +34,8 @@ repository structure.
   metrics to bibliographic records.
 - REST API v1: added `metric_source` filtering on the records list
   endpoint.
-- Journal metric information now displayed on bibliographic detail pages.
+- Journal metric information, including Grade, now displayed on
+  bibliographic detail pages.
 - OAI-PMH 2.0 harvesting behavior unchanged.
 
 ## v3.3.1 — 2026-05-14
